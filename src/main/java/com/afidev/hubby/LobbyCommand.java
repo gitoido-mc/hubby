@@ -18,7 +18,7 @@ public class LobbyCommand {
                 .executes(context -> {
                     ServerPlayer player = context.getSource().getPlayer();
                     if (player != null) {
-                        if (HubbyConfig.isHubSet()) {
+                        if (HubbyConfig.isLobbySet()) {
                             HubbyConfig.Location lobby = HubbyConfig.getLobby();
                             ResourceKey<Level> dimensionKey = ResourceKey.create(Registries.DIMENSION, ResourceLocation.parse(lobby.dimension));
                             ServerLevel targetWorld = player.getServer().getLevel(dimensionKey);

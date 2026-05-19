@@ -20,7 +20,7 @@ public class SpawnCommand {
                 .executes(context -> {
                     ServerPlayer player = context.getSource().getPlayer();
                     if (player != null) {
-                        if (HubbyConfig.isHubSet()) {
+                        if (HubbyConfig.isSpawnSet()) {
                             HubbyConfig.Location spawn = HubbyConfig.getSpawn();
                             ResourceKey<Level> dimensionKey = ResourceKey.create(Registries.DIMENSION, ResourceLocation.parse(spawn.dimension));
                             ServerLevel targetWorld = player.getServer().getLevel(dimensionKey);

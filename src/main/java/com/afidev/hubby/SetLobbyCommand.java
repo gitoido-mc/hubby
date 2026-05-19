@@ -20,8 +20,8 @@ public class SetLobbyCommand {
                     }
                     if (hasPermission(player, "hubby.setlobby")) {
                         Vec3 pos = player.position();
-                        float yaw = player.getXRot();
-                        float pitch = player.getYRot();
+                        float yaw = player.getYRot();
+                        float pitch = player.getXRot();
                         String dimension = player.level().dimension().location().toString();
                         HubbyConfig.setLobby(pos.x, pos.y, pos.z, yaw, pitch, dimension);
                         context.getSource().sendSuccess(() -> TextUtils.parseColor(HubbyConfig.getConfigData().getMessages().lobby_set_confirmation), true);

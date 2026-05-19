@@ -1,19 +1,15 @@
 package com.afidev.hubby;
 
 import com.mojang.brigadier.CommandDispatcher;
-import net.luckperms.api.LuckPermsProvider;
-import net.luckperms.api.model.user.User;
 import net.minecraft.commands.CommandSourceStack;
-import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.phys.Vec3;
-import org.jetbrains.annotations.UnknownNullability;
 
 import static com.afidev.hubby.Hubby.hasPermission;
 import static net.minecraft.commands.Commands.literal;
 
 public class SetHubCommand {
-    public static void register(@UnknownNullability CommandDispatcher<CommandSourceStack> dispatcher) {
+    public static void register(CommandDispatcher<CommandSourceStack> dispatcher) {
         dispatcher.register(literal("sethub")
                 .requires(source -> source.hasPermission(2) && source.getEntity() instanceof ServerPlayer)
                 .executes(context -> {

@@ -8,12 +8,11 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.level.Level;
-import org.jetbrains.annotations.UnknownNullability;
 
 import static net.minecraft.commands.Commands.literal;
 
 public class LobbyCommand {
-    public static void register(@UnknownNullability CommandDispatcher<CommandSourceStack> dispatcher) {
+    public static void register(CommandDispatcher<CommandSourceStack> dispatcher) {
         dispatcher.register(literal("lobby")
                 .requires(source -> source.getEntity() instanceof ServerPlayer)
                 .executes(context -> {

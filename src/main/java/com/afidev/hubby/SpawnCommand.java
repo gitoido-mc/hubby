@@ -31,7 +31,7 @@ public class SpawnCommand {
                             player.teleportTo(targetWorld, spawn.x, spawn.y, spawn.z, spawn.yaw, spawn.pitch);
                             context.getSource().sendSuccess(() -> TextUtils.parseColor(HubbyConfig.getConfigData().getMessages().teleported_to_spawn), false);
                         } else {
-                            context.getSource().sendFailure(TextUtils.parseColor(HubbyConfig.getConfigData().getMessages().hub_not_set));
+                            context.getSource().sendFailure(TextUtils.parseColor(HubbyConfig.getConfigData().getMessages().spawn_not_set));
                             return 0;
                         }
                     } else {

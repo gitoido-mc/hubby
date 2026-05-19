@@ -22,7 +22,7 @@ public class SetLobbyCommand {
                         Vec3 pos = player.position();
                         float yaw = player.getXRot();
                         float pitch = player.getYRot();
-                        String dimension = player.level().toString();
+                        String dimension = player.level().dimension().location().toString();
                         HubbyConfig.setLobby(pos.x, pos.y, pos.z, yaw, pitch, dimension);
                         context.getSource().sendSuccess(() -> TextUtils.parseColor(HubbyConfig.getConfigData().getMessages().lobby_set_confirmation), true);
                         return 1;

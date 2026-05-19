@@ -22,7 +22,7 @@ public class SetHubCommand {
                         Vec3 pos = player.position();
                         float yaw = player.getYRot();
                         float pitch = player.getXRot();
-                        String dimension = player.level().dimension().toString();
+                        String dimension = player.level().dimension().location().toString();
                         HubbyConfig.setHub(pos.x, pos.y, pos.z, yaw, pitch, dimension);
                         context.getSource().sendSuccess(() -> TextUtils.parseColor(HubbyConfig.getConfigData().getMessages().hub_set_confirmation), true);
                         return 1;

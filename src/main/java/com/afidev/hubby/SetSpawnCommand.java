@@ -22,7 +22,7 @@ public class SetSpawnCommand {
                         Vec3 pos = player.position();
                         float yaw = player.getYRot();
                         float pitch = player.getXRot();
-                        String dimension = player.level().toString();
+                        String dimension = player.level().dimension().location().toString();
                         HubbyConfig.setSpawn(pos.x, pos.y, pos.z, yaw, pitch, dimension);
                         context.getSource().sendSuccess(() -> TextUtils.parseColor(HubbyConfig.getConfigData().getMessages().spawn_set_confirmation), true);
                         return 1;

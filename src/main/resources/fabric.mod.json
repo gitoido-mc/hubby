@@ -13,20 +13,15 @@
   "icon": "assets/hubby/icon.png",
   "environment": "*",
   "entrypoints": {
-    "main": ["com.afidev.hubby.Hubby"],
-    "client": ["com.afidev.hubby.HubbyClient"]
+    "main": ["com.afidev.hubby.Hubby"]
   },
   "mixins": [
-    "hubby.mixins.json",
-    {
-      "config": "hubby.client.mixins.json",
-      "environment": "client"
-    }
+    "hubby.mixins.json"
   ],
   "depends": {
-    "fabricloader": ">=0.16.5",
-    "minecraft": "~1.20.1",
-    "java": ">=17",
+    "fabricloader": ">=0.17.2",
+    "minecraft": "~1.21.1",
+    "java": ">=21",
     "fabric-api": "*",
     "luckperms": "*"
   }
